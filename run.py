@@ -404,7 +404,7 @@ async def signup(xid, mail, code, verification_token):
         "email": mail,
         "verification_code": code,
         "verification_token": verification_token,
-        "password": "linyuan666",
+        "password": "l@inyuan666",
         "client_id": "YvtoWO6GNHiuCl7x"
     }
     headers = {
@@ -666,8 +666,8 @@ async def main(incode):
         if activation['add_days'] == 5:
             print(f'邀请码: {incode} ==> 邀请成功, 用时: {run_time} 秒')
             print(f'邮箱: {mail}')
-            print(f'密码: linyuan666')
-            PUSH_MSG += f'邀请码: {incode} ==> 邀请成功\n邮箱: {mail}\n密码: linyuan666\n'
+            print(f'密码: l@inyuan666')
+            PUSH_MSG += f'邀请码: {incode} ==> 邀请成功\n邮箱: {mail}\n密码: l@inyuan666\n'
             return
         else:
             print(f'邀请码: {incode} ==> 邀请失败, 用时: {run_time} 秒')
@@ -692,7 +692,7 @@ async def run():
         PUSH_MSG += f'=========第 {i + 1} 个邀请码=========\n'
         invite_code = invite_code_list[i]
         await main(invite_code)
-    await push(PUSH_MSG)
+    # await push(PUSH_MSG)
 
 
 asyncio.run(run())
